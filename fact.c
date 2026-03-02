@@ -1,21 +1,9 @@
-#include <stdio.h>
+// fact.c
+int factorial(int n)
+{
+    int i, fact = 1;
+    for (i = 1; i <= n; i++)
+        fact = fact * i;
 
-int main() {
-    int num, i;
-    unsigned long long factorial = 1;
-
-    printf("Enter a number: ");
-    scanf("%d", &num);
-
-    if (num < 0) {
-        printf("Factorial of a negative number is not defined.\n");
-    } else {
-        for (i = 1; i <= num; i++) {
-            factorial = factorial * i;
-        }
-
-        printf("Factorial of %d is %llu\n", num, factorial);
-    }
-
-    return 0;
+    return fact;
 }
